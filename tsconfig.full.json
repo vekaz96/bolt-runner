@@ -1,0 +1,23 @@
+{
+  /*
+   * Slow, complete type check — resolves EVERY @game import into the real
+   * kidsvolt-web sources, including BoltGame3D and its three/fiber/drei graph.
+   *
+   * Takes ~9-10 minutes (syscall-bound resolving the sibling repo's pnpm symlink
+   * farm), so it is not the day-to-day gate. Its job is to validate
+   * src/types/game-boundary.d.ts against the component it mirrors.
+   *
+   *   pnpm check       fast, ~2s   — use this normally and in CI
+   *   pnpm check:full  ~10min      — run when the game's API changes, and before a release
+   *
+   * Note: this also reports pre-existing errors that live in kidsvolt-web and are
+   * not ours; that noise is exactly why it is not the default gate.
+   */
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "@game/*": ["../kidsvolt-web/client/src/components/*"]
+    }
+  },
+  "include": ["src"]
+}

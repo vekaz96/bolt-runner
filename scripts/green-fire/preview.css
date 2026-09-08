@@ -1,0 +1,52 @@
+@import url("@fontsource/fredoka/500.css");
+@import url("@fontsource/fredoka/600.css");
+
+:root { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #ecf7ee; background: #081b14; font-synthesis: none; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: radial-gradient(ellipse at 80% 0%, #183d29 0%, #081b14 55%); min-width: 320px; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { font: inherit; cursor: pointer; }
+button:focus-visible, a:focus-visible { outline: 3px solid #c7ff83; outline-offset: 4px; }
+main { width: min(1240px, 100%); margin: auto; padding: 28px 38px; }
+header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-bottom: 24px; border-bottom: 1px solid #ffffff15; }
+.brand { color: #b5ff69; font-family: "Fredoka", sans-serif; font-size: 20px; font-weight: 600; letter-spacing: 1px; text-decoration: none; }
+.phase { color: #9fbea9; font-size: 11px; letter-spacing: 1.5px; font-weight: 700; }
+.intro { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 32px 0 26px; }
+.eyebrow { color: #a9d97d; font-weight: 600; font-size: 13px; letter-spacing: 0.2px; margin: 0 0 5px; }
+h1 { font-family: "Fredoka", sans-serif; font-size: clamp(42px, 5vw, 62px); font-weight: 600; margin: 0 0 8px; letter-spacing: -1px; line-height: 1.08; }
+.description { color: #abc4b3; font-size: 15px; line-height: 1.6; max-width: 570px; margin: 0; }
+.asset-tag { background: #94d85512; border: 1px solid #8bd25a3d; color: #c2f496; border-radius: 100px; font-size: 10px; font-weight: 700; letter-spacing: 1px; padding: 12px 14px; white-space: nowrap; }
+.workspace { display: grid; grid-template-columns: minmax(0, 1fr) 310px; gap: 24px; align-items: start; }
+.preview-panel { border: 1px solid #93c9a52a; border-radius: 22px; overflow: hidden; background: #0a2019; }
+.viewport { height: 560px; position: relative; }
+.gameplay .viewport { max-width: 390px; height: 640px; margin: auto; }
+.gameplay { background: #071510; }
+.view-badge { position: absolute; top: 18px; left: 18px; background: #071710bc; border: 1px solid #a4d4b731; color: #d4eedb; padding: 9px 11px; border-radius: 8px; font-size: 9px; letter-spacing: 1px; pointer-events: none; }
+.loading { position: absolute; inset: 0; display: grid; place-items: center; pointer-events: none; color: #c4e0cc; font-size: 14px; }
+.load-error, .canvas-error { padding: 20px; color: #ffd9b5; background: #381c12ee; font-size: 13px; overflow-wrap: anywhere; }
+.load-error { position: absolute; bottom: 16px; left: 16px; right: 16px; border-radius: 10px; }
+.preview-caption { padding: 15px 17px; display: flex; gap: 8px; align-items: center; font-size: 11px; color: #b0c8b8; border-top: 1px solid #93c9a521; flex-wrap: wrap; }
+.status-dot { width: 6px; height: 6px; border-radius: 50%; background: #9ceb5a; flex: 0 0 auto; }
+.status-dot.paused { background: #dfc65e; }
+.interaction-hint { margin-left: auto; color: #809f8d; }
+aside { display: flex; flex-direction: column; gap: 16px; }
+.controls-card, .notes-card { border: 1px solid #93c9a521; background: #10271eaa; border-radius: 18px; padding: 23px; }
+h2 { font-family: "Fredoka", sans-serif; font-weight: 500; font-size: 21px; margin: 0 0 22px; }
+.control-label { color: #acc7b6; font-size: 12px; margin: 19px 0 8px; }
+.segmented { display: flex; padding: 4px; gap: 3px; background: #06170fc4; border-radius: 11px; }
+.segmented button { border: 0; background: transparent; color: #a9c1b2; font-size: 12px; padding: 11px 7px; flex: 1; min-height: 44px; border-radius: 8px; }
+.segmented button[aria-pressed="true"] { background: #b6ee74; color: #183316; font-weight: 700; }
+.segmented button:hover:not([aria-pressed="true"]) { background: #ffffff0d; color: #f1ffeb; }
+.pause-button { width: 100%; margin-top: 24px; padding: 13px; min-height: 46px; border-radius: 11px; border: 1px solid #98bd9c55; color: #e5f6e9; background: #173729; font-size: 13px; }
+.pause-button:hover { background: #234a36; }
+.notes-card h2 { font-size: 19px; margin-bottom: 12px; }
+ul { margin: 0; padding-left: 17px; color: #adc5b4; font-size: 13px; line-height: 1.65; }
+li + li { margin-top: 8px; }
+li::marker { color: #b6ee74; }
+.scope-note { font-size: 12px; color: #9db5a5; line-height: 1.6; margin: 19px 0 0; padding-top: 16px; border-top: 1px solid #93c9a521; }
+.download { display: flex; justify-content: space-between; color: #c4eb9d; font-size: 13px; padding: 13px 7px; text-decoration: none; }
+.download:hover { text-decoration: underline; }
+footer { color: #708c7b; text-align: center; font-size: 11px; padding: 28px 0 4px; }
+@media (max-width: 940px) { main { padding: 22px; } .workspace { grid-template-columns: minmax(0, 1fr) 270px; gap: 16px; } .viewport { height: 510px; } .gameplay .viewport { height: 590px; } .asset-tag { display: none; } .controls-card, .notes-card { padding: 18px; } .interaction-hint { width: 100%; margin: 2px 0 0 14px; } }
+@media (max-width: 700px) { main { padding: 19px 16px; } header { gap: 10px; padding-bottom: 17px; } .brand { font-size: 17px; } .phase { font-size: 8px; letter-spacing: 0.8px; } .intro { padding: 24px 0 20px; } .description { font-size: 13px; } .workspace { grid-template-columns: 1fr; } .viewport { height: 420px; } .gameplay .viewport { width: 100%; height: min(145vw, 640px); } .preview-panel { border-radius: 16px; } .controls-card { padding: 20px; } .segmented button { font-size: 13px; } .controls-card h2 { margin-bottom: 16px; } footer { line-height: 1.5; } }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; } }

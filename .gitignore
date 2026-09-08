@@ -1,0 +1,26 @@
+node_modules/
+dist/
+public/
+.DS_Store
+*.log
+.idea/
+.vscode/
+ios/App/Pods/
+ios/App/build/
+android/.gradle/
+android/app/build/
+android/build/
+vendor/
+
+# Local Supabase credentials
+.env
+
+# Android signing — never commit the upload keystore or its credentials
+android/keystore.properties
+android/app/*.jks
+android/app/*.keystore
+
+# AI assistant context (local-only, not shared)
+CLAUDE.md
+.claude/
+.serena/

@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    /*
+     * Only the small, dependency-light game modules are resolved for real (~0.8 s,
+     * full type safety). `@game/BoltGame3D` is deliberately NOT mapped: it drags
+     * three / fiber / drei out of the sibling repo's 689-package pnpm store, which
+     * cost tsc 9m30s at 1 % CPU — syscall-bound on symlink resolution, not
+     * type-checking. It is typed by src/types/game-boundary.d.ts instead.
+     *
+     * Vite resolves `@game` for real at build and dev time (see vite.config.ts),
+     * so this only affects type-checking. `pnpm check:full` restores real
+     * resolution and validates the declaration against the actual component.
+     */
+    "paths": {
+      "@game/bolt/*": ["../kidsvolt-web/client/src/components/bolt/*"]
+    }
+  },
+  "include": ["src"]
+}

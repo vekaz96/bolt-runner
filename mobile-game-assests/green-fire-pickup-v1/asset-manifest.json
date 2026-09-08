@@ -1,0 +1,25 @@
+{
+  "name": "Green Fire Pickup",
+  "phase": 1,
+  "generator": "Blender 5 original geometry and animation",
+  "model": "models/green-fire-pickup.glb",
+  "source": "source/green-fire-pickup.blend",
+  "preview": "previews/green-fire-pickup.png",
+  "animatedPreview": "previews/green-fire-idle.gif",
+  "mapPreviews": {
+    "current": "previews/current-map-gameplay.png",
+    "boulevard": "previews/boulevard-gameplay.png"
+  },
+  "animation": "GreenFire_Idle",
+  "bytes": 126848,
+  "triangles": 3184,
+  "meshes": 15,
+  "durationSeconds": 2,
+  "fps": 24,
+  "upAxis": "Y",
+  "frontAxis": "+Z",
+  "units": "meters",
+  "recommendedScale": 0.7,
+  "textures": [],
+  "notes": "Palette, emissive materials, geometry, morph targets and animation are embedded in the GLB."
+}

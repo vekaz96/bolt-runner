@@ -1,0 +1,373 @@
+{
+  "generator": "Blender procedural modeling",
+  "assets": [
+    {
+      "id": "clock-tower",
+      "model": "models/clock-tower.glb",
+      "source": "source/clock-tower.blend",
+      "preview": "previews/clock-tower.png",
+      "bytes": 986204,
+      "triangles": 14968,
+      "meshCount": 7,
+      "materials": [
+        "Boulevard_cream",
+        "Boulevard_dark_green",
+        "Boulevard_glass",
+        "Boulevard_gold",
+        "Boulevard_green",
+        "Boulevard_teal",
+        "Boulevard_teal_light"
+      ],
+      "gltfBounds": {
+        "min": [
+          -1.225000023841858,
+          0.0,
+          -1.225000023841858
+        ],
+        "max": [
+          1.225000023841858,
+          8.667084693908691,
+          1.225000023841858
+        ]
+      },
+      "upAxis": "Y",
+      "frontAxis": "+Z",
+      "units": "meters"
+    },
+    {
+      "id": "house-yellow",
+      "model": "models/house-yellow.glb",
+      "source": "source/house-yellow.blend",
+      "preview": "previews/house-yellow.png",
+      "bytes": 1111948,
+      "triangles": 17152,
+      "meshCount": 8,
+      "materials": [
+        "Boulevard_cream",
+        "Boulevard_dark_green",
+        "Boulevard_glass",
+        "Boulevard_gold",
+        "Boulevard_green",
+        "Boulevard_teal",
+        "Boulevard_teal_light",
+        "Boulevard_yellow"
+      ],
+      "gltfBounds": {
+        "min": [
+          -1.8700000047683716,
+          0.0,
+          -1.5800000429153442
+        ],
+        "max": [
+          1.8700000047683716,
+          5.132500171661377,
+          1.9170000553131104
+        ]
+      },
+      "upAxis": "Y",
+      "frontAxis": "+Z",
+      "units": "meters"
+    },
+    {
+      "id": "shop-coral",
+      "model": "models/shop-coral.glb",
+      "source": "source/shop-coral.blend",
+      "preview": "previews/shop-coral.png",
+      "bytes": 1229436,
+      "triangles": 18868,
+      "meshCount": 8,
+      "materials": [
+        "Boulevard_coral",
+        "Boulevard_cream.001",
+        "Boulevard_dark_green.001",
+        "Boulevard_glass.001",
+        "Boulevard_gold.001",
+        "Boulevard_green.001",
+        "Boulevard_teal.001",
+        "Boulevard_teal_light.001"
+      ],
+      "gltfBounds": {
+        "min": [
+          -1.8700000047683716,
+          0.0,
+          -1.5800000429153442
+        ],
+        "max": [
+          1.8700000047683716,
+          5.202500343322754,
+          2.187000036239624
+        ]
+      },
+      "upAxis": "Y",
+      "frontAxis": "+Z",
+      "units": "meters"
+    },
+    {
+      "id": "house-mint",
+      "model": "models/house-mint.glb",
+      "source": "source/house-mint.blend",
+      "preview": "previews/house-mint.png",
+      "bytes": 1038508,
+      "triangles": 16124,
+      "meshCount": 8,
+      "materials": [
+        "Boulevard_cream.002",
+        "Boulevard_dark_green.002",
+        "Boulevard_glass.002",
+        "Boulevard_gold.002",
+        "Boulevard_green.002",
+        "Boulevard_mint",
+        "Boulevard_teal.002",
+        "Boulevard_teal_light.002"
+      ],
+      "gltfBounds": {
+        "min": [
+          -1.8700000047683716,
+          0.0,
+          -1.5799999237060547
+        ],
+        "max": [
+          1.869999885559082,
+          5.0625,
+          1.7925000190734863
+        ]
+      },
+      "upAxis": "Y",
+      "frontAxis": "+Z",
+      "units": "meters"
+    },
+    {
+      "id": "tree-round",
+      "model": "models/tree-round.glb",
+      "source": "source/tree-round.blend",
+      "preview": "previews/tree-round.png",
+      "bytes": 73196,
+      "triangles": 2192,
+      "meshCount": 4,
+      "materials": [
+        "Boulevard_bark",
+        "Boulevard_dark_green.003",
+        "Boulevard_leaf",
+        "Boulevard_leaf_light"
+      ],
+      "gltfBounds": {
+        "min": [
+          -1.1059596538543701,
+          0.0,
+          -0.8999999761581421
+        ],
+        "max": [
+          1.0947060585021973,
+          3.200000047683716,
+          0.8399999737739563
+        ]
+      },
+      "upAxis": "Y",
+      "frontAxis": "+Z",
+      "units": "meters"
+    },
+    {
+      "id": "banner",
+      "model": "models/banner.glb",
+      "source": "source/banner.blend",
+      "preview": "previews/banner.png",
+      "bytes": 153388,
+      "triangles": 2400,
+      "meshCount": 3,
+      "materials": [
+        "Boulevard_gold.003",
+        "Boulevard_green.003",
+        "Boulevard_yellow.001"
+      ],
+      "gltfBounds": {
+        "min": [
+          -0.6899999976158142,
+          0.0,
+          -0.25
+        ],
+        "max": [
+          0.5513570308685303,
+          2.6999998092651367,
+          0.18000000715255737
+        ]
+      },
+      "upAxis": "Y",
+      "frontAxis": "+Z",
+      "units": "meters"
+    },
+    {
+      "id": "fence",
+      "model": "models/fence.glb",
+      "source": "source/fence.blend",
+      "preview": "previews/fence.png",
+      "bytes": 114428,
+      "triangles": 1948,
+      "meshCount": 2,
+      "materials": [
+        "Boulevard_cream.003",
+        "Boulevard_gold.004"
+      ],
+      "gltfBounds": {
+        "min": [
+          -1.0199999809265137,
+          0.0,
+          -0.1899999976158142
+        ],
+        "max": [
+          1.0199999809265137,
+          1.0321779251098633,
+          0.15000000596046448
+        ]
+      },
+      "upAxis": "Y",
+      "frontAxis": "+Z",
+      "units": "meters"
+    },
+    {
+      "id": "planter",
+      "model": "models/planter.glb",
+      "source": "source/planter.blend",
+      "preview": "previews/planter.png",
+      "bytes": 242996,
+      "triangles": 4608,
+      "meshCount": 6,
+      "materials": [
+        "Boulevard_coral.001",
+        "Boulevard_gold.005",
+        "Boulevard_leaf.001",
+        "Boulevard_leaf_light.001",
+        "Boulevard_soil",
+        "Boulevard_yellow.002"
+      ],
+      "gltfBounds": {
+        "min": [
+          -0.6000000238418579,
+          0.0,
+          -0.4750000238418579
+        ],
+        "max": [
+          0.6000000238418579,
+          0.6940000057220459,
+          0.4750000238418579
+        ]
+      },
+      "upAxis": "Y",
+      "frontAxis": "+Z",
+      "units": "meters"
+    },
+    {
+      "id": "bench",
+      "model": "models/bench.glb",
+      "source": "source/bench.blend",
+      "preview": "previews/bench.png",
+      "bytes": 158244,
+      "triangles": 2408,
+      "meshCount": 2,
+      "materials": [
+        "Boulevard_gold.006",
+        "Boulevard_green.004"
+      ],
+      "gltfBounds": {
+        "min": [
+          -0.7649999856948853,
+          0.0,
+          -0.3564399778842926
+        ],
+        "max": [
+          0.76500004529953,
+          1.0104999542236328,
+          0.3100000023841858
+        ]
+      },
+      "upAxis": "Y",
+      "frontAxis": "+Z",
+      "units": "meters"
+    },
+    {
+      "id": "road-section",
+      "model": "models/road-section.glb",
+      "source": "source/road-section.blend",
+      "preview": "previews/road-section.png",
+      "bytes": 281572,
+      "triangles": 3948,
+      "meshCount": 5,
+      "materials": [
+        "Boulevard_cream.004",
+        "Boulevard_green.005",
+        "Boulevard_road",
+        "Boulevard_sidewalk",
+        "Boulevard_soil.001"
+      ],
+      "gltfBounds": {
+        "min": [
+          -3.7200000286102295,
+          -0.25999999046325684,
+          -6.0
+        ],
+        "max": [
+          3.7200000286102295,
+          0.17999999225139618,
+          6.0
+        ]
+      },
+      "upAxis": "Y",
+      "frontAxis": "+Z",
+      "units": "meters"
+    },
+    {
+      "id": "lightning-pickup",
+      "model": "models/lightning-pickup.glb",
+      "source": "source/lightning-pickup.blend",
+      "preview": "previews/lightning-pickup.png",
+      "bytes": 9884,
+      "triangles": 164,
+      "meshCount": 1,
+      "materials": [
+        "Boulevard_gold.007"
+      ],
+      "gltfBounds": {
+        "min": [
+          -0.2656300961971283,
+          0.03304281458258629,
+          -0.07000000029802322
+        ],
+        "max": [
+          0.2827479839324951,
+          0.8670852780342102,
+          0.07000000029802322
+        ]
+      },
+      "upAxis": "Y",
+      "frontAxis": "+Z",
+      "units": "meters"
+    },
+    {
+      "id": "toy-crate",
+      "model": "models/toy-crate.glb",
+      "source": "source/toy-crate.blend",
+      "preview": "previews/toy-crate.png",
+      "bytes": 77856,
+      "triangles": 1084,
+      "meshCount": 2,
+      "materials": [
+        "Boulevard_cream",
+        "Boulevard_red"
+      ],
+      "gltfBounds": {
+        "min": [
+          -0.46000000834465027,
+          0.0,
+          -0.4099999964237213
+        ],
+        "max": [
+          0.46000000834465027,
+          0.8999999761581421,
+          0.4099999964237213
+        ]
+      },
+      "upAxis": "Y",
+      "frontAxis": "+Z",
+      "units": "meters"
+    }
+  ]
+}

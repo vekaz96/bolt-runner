@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Green Fire · Phase 1 asset gallery</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #091c15; color: #edf7e9; font: 16px/1.6 system-ui, -apple-system, sans-serif; }
+    main { max-width: 1150px; margin: auto; padding: 44px 24px; }
+    .eyebrow { color: #b5ed85; font-size: 12px; font-weight: 700; letter-spacing: 1.8px; margin: 0 0 8px; }
+    h1 { margin: 0 0 12px; font-size: clamp(36px, 6vw, 60px); line-height: 1.1; letter-spacing: -1px; }
+    header p { max-width: 740px; color: #b9cdbc; }
+    .links { display: flex; gap: 12px; flex-wrap: wrap; margin: 24px 0 20px; }
+    a { color: #ccf49d; text-underline-offset: 4px; }
+    a:focus-visible { outline: 3px solid #d6ffa7; outline-offset: 4px; }
+    .links a { padding: 10px 16px; background: #1b3927; border: 1px solid #629347; border-radius: 10px; text-decoration: none; font-size: 14px; }
+    .links a:hover { background: #2b4c34; }
+    .metrics { font-size: 13px; color: #a8c49d; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin: 30px 0; }
+    figure { margin: 0; background: #122c20; border: 1px solid #345740; border-radius: 18px; overflow: hidden; }
+    .image { display: block; background: #0a1b14; }
+    img { display: block; width: 100%; height: 430px; object-fit: contain; }
+    .maps img { height: 510px; }
+    figcaption { padding: 19px 21px; }
+    h2 { font-size: 21px; margin: 0 0 5px; line-height: 1.35; }
+    figcaption p { font-size: 14px; color: #b0c6b6; margin: 0; }
+    .motion-still { display: none; }
+    .note { background: #142b20; padding: 20px 24px; border-left: 3px solid #9ce367; border-radius: 0 12px 12px 0; color: #bcd0c1; font-size: 14px; }
+    footer { color: #94ae9c; font-size: 13px; padding-top: 10px; }
+    @media (max-width: 660px) { main { padding: 30px 16px; } .grid { grid-template-columns: 1fr; gap: 18px; } img { height: auto; max-height: 520px; } .maps img { height: auto; max-height: 650px; } .links a { flex: 1 1 auto; text-align: center; } }
+    @media (prefers-reduced-motion: reduce) { .motion-gif { display: none; } .motion-still { display: block; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow">BOLT RUNNER / PHASE 01</p>
+    <h1>Green Fire</h1>
+    <p>A separate animated 3D pickup with an emerald flame, bright lime core, gentle hover and rising sparks. These previews show the actual model.</p>
+    <nav class="links" aria-label="Asset downloads and preview">
+      <a href="models/green-fire-pickup.glb" download>Animated GLB ↓</a>
+      <a href="source/green-fire-pickup.blend" download>Blender source ↓</a>
+      <a href="http://localhost:5181/green-fire-preview.html">Open live 3D preview ↗</a>
+    </nav>
+    <p class="metrics">123.9 KiB · 3,184 triangles · 15 meshes · 5 embedded materials · no textures<br>One GreenFire_Idle clip · 2-second loop · Y up · +Z front · recommended scale 0.7</p>
+  </header>
+
+  <section class="grid" aria-label="Model renders">
+    <figure>
+      <a class="image" href="previews/green-fire-idle.gif">
+        <img class="motion-gif" src="previews/green-fire-idle.gif" alt="Animated green-fire pickup floating, flickering and emitting seven rising sparks">
+        <img class="motion-still" src="previews/green-fire-pickup.png" alt="Still green-fire pickup; open image link to view its animation">
+      </a>
+      <figcaption><h2>Idle animation</h2><p>A two-second loop rendered from the editable Blender model. Reduced-motion preferences show a still frame instead.</p></figcaption>
+    </figure>
+    <figure>
+      <a class="image" href="previews/green-fire-pickup.png"><img src="previews/green-fire-pickup.png" alt="Still render showing rounded emerald flame tongues, a raised lime core and a green halo"></a>
+      <figcaption><h2>Model detail</h2><p>Volumetric flames and emissive colors. Geometry, materials and animation travel together in one GLB.</p></figcaption>
+    </figure>
+  </section>
+
+  <section class="grid maps" aria-label="Pickup visibility in both maps">
+    <figure>
+      <a class="image" href="previews/current-map-gameplay.png"><img src="previews/current-map-gameplay.png" alt="Green-fire pickup viewed at gameplay scale inside the current map" loading="lazy"></a>
+      <figcaption><h2>Current Map</h2><p>The preview UI with a 390px-wide gameplay canvas. The pickup uses 0.7 scale and the game's chase camera.</p></figcaption>
+    </figure>
+    <figure>
+      <a class="image" href="previews/boulevard-gameplay.png"><img src="previews/boulevard-gameplay.png" alt="Green-fire pickup viewed at gameplay scale inside Bolt Boulevard" loading="lazy"></a>
+      <figcaption><h2>Bolt Boulevard</h2><p>The same 390px-wide gameplay canvas inside the preview UI, with Boulevard's road, buildings and greenery.</p></figcaption>
+    </figure>
+  </section>
+
+  <p class="note"><strong>Phase 1 scope:</strong> pickup artwork and idle animation. Collection, stored charges, casting and smoke impacts come later. The map images are visual preview scenes; the ability is not installed in gameplay.</p>
+  <footer>This gallery and its media work offline. The live 3D link requires the development server.<br>See <a href="README.md">README.md</a> for placement, animation playback, rebuild commands and validation.</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,73 @@
+require_relative '../../node_modules/.pnpm/@capacitor+ios@7.6.7_@capacitor+core@7.6.7/node_modules/@capacitor/ios/scripts/pods_helpers'
+
+platform :ios, '14.0'
+use_frameworks!
+
+# workaround to avoid Xcode caching of Pods that requires
+# Product -> Clean Build Folder after new Cordova plugins installed
+# Requires CocoaPods 1.6 or newer
+install! 'cocoapods', :disable_input_output_paths => true
+
+def capacitor_pods
+  pod 'Capacitor', :path => '../../node_modules/.pnpm/@capacitor+ios@7.6.7_@capacitor+core@7.6.7/node_modules/@capacitor/ios'
+  pod 'CapacitorCordova', :path => '../../node_modules/.pnpm/@capacitor+ios@7.6.7_@capacitor+core@7.6.7/node_modules/@capacitor/ios'
+  pod 'CapacitorApp', :path => '../../node_modules/.pnpm/@capacitor+app@7.1.2_@capacitor+core@7.6.7/node_modules/@capacitor/app'
+  pod 'CapacitorHaptics', :path => '../../node_modules/.pnpm/@capacitor+haptics@7.0.5_@capacitor+core@7.6.7/node_modules/@capacitor/haptics'
+  pod 'CapacitorSplashScreen', :path => '../../node_modules/.pnpm/@capacitor+splash-screen@7.0.5_@capacitor+core@7.6.7/node_modules/@capacitor/splash-screen'
+  pod 'CapacitorStatusBar', :path => '../../node_modules/.pnpm/@capacitor+status-bar@7.0.6_@capacitor+core@7.6.7/node_modules/@capacitor/status-bar'
+end
+
+target 'App' do
+  capacitor_pods
+  # Add your Pods here
+end
+
+post_install do |installer|
+  assertDeploymentTarget(installer)
+
+  sandbox = installer.sandbox.root.to_s
+  system("xattr", "-cr", sandbox)
+
+  # Pods don't need individual codesign for simulator; App embed step re-signs.
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings["CODE_SIGNING_ALLOWED"] = "NO"
+      config.build_settings["CODE_SIGNING_REQUIRED"] = "NO"
+      # Cordova headers use #import "..." — Xcode 16+ errors unless this is off.
+      config.build_settings["CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER"] = "NO"
+    end
+  end
+
+  installer.aggregate_targets.each do |aggregate_target|
+    aggregate_target.user_project.native_targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings["CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER"] = "NO"
+      end
+    end
+    aggregate_target.user_project.build_configurations.each do |config|
+      config.build_settings["CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER"] = "NO"
+    end
+    aggregate_target.user_project.save
+  end
+
+  frameworks_script = File.join(
+    sandbox,
+    "Target Support Files/Pods-App/Pods-App-frameworks.sh",
+  )
+  if File.exist?(frameworks_script)
+    content = File.read(frameworks_script)
+    unless content.include?("xattr -cr \"${source}\"")
+      content = content.sub(
+        '  # Use filter instead of exclude so missing patterns don\'t throw errors.',
+        "  xattr -cr \"${source}\" 2>/dev/null || true\n\n  # Use filter instead of exclude so missing patterns don't throw errors.",
+      )
+    end
+    unless content.include?('xattr -cr "${destination}/$(basename "$1")"')
+      content = content.sub(
+        "  # Resign the code if required by the build settings to avoid unstable apps\n  code_sign_if_enabled",
+        "  xattr -cr \"${destination}/$(basename \"$1\")\" 2>/dev/null || true\n\n  # Resign the code if required by the build settings to avoid unstable apps\n  code_sign_if_enabled",
+      )
+    end
+    File.write(frameworks_script, content)
+  end
+end
