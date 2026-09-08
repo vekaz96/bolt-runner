@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#14532d" />
+<title>Bolt Runner — Privacy Policy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap">
+<style>
+  :root {
+    --paper: #fbfaf6;
+    --surface: #ffffff;
+    --ink: #17241a;
+    --muted: #52604f;
+    --line: #dfe6da;
+    --forest: #14532d;
+    --forest-dark: #052e16;
+    --lime: #4ade80;
+    --gold: #ca8a04;
+    --gold-soft: #fdf3d6;
+    --link: #15803d;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0f1712;
+      --surface: #16211a;
+      --ink: #e9f1e6;
+      --muted: #9fb09a;
+      --line: #29392c;
+      --forest: #4ade80;
+      --forest-dark: #86efac;
+      --lime: #4ade80;
+      --gold: #fde047;
+      --gold-soft: #2a2410;
+      --link: #6ee7a0;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0f1712;
+    --surface: #16211a;
+    --ink: #e9f1e6;
+    --muted: #9fb09a;
+    --line: #29392c;
+    --forest: #4ade80;
+    --forest-dark: #86efac;
+    --lime: #4ade80;
+    --gold: #fde047;
+    --gold-soft: #2a2410;
+    --link: #6ee7a0;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 0;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 56px 24px 90px; }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gold-soft);
+    color: var(--gold);
+    border: 1px solid color-mix(in srgb, var(--gold) 35%, transparent);
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-family: "Fredoka", system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    margin-bottom: 22px;
+  }
+  .badge svg { width: 14px; height: 14px; }
+
+  h1 {
+    font-family: "Fredoka", system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--forest);
+    margin: 0 0 6px;
+    text-wrap: balance;
+  }
+  .updated { color: var(--muted); font-size: 14px; margin: 0 0 36px; }
+
+  h2 {
+    font-family: "Fredoka", system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--ink);
+    margin: 40px 0 12px;
+    padding-top: 4px;
+    border-top: 1px solid var(--line);
+  }
+  section:first-of-type h2 { border-top: none; padding-top: 0; }
+
+  p { margin: 0 0 14px; color: var(--ink); max-width: 62ch; }
+  p.muted, li.muted { color: var(--muted); }
+  ul { margin: 0 0 14px; padding-left: 22px; max-width: 62ch; }
+  li { margin-bottom: 6px; }
+  strong { color: var(--ink); font-weight: 600; }
+
+  a { color: var(--link); text-decoration-thickness: 1.5px; }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin: 18px 0;
+  }
+  .card h3 {
+    font-family: "Fredoka", system-ui, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 10px;
+    color: var(--forest);
+  }
+  .kv { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; font-size: 14.5px; }
+  .kv dt { color: var(--muted); font-weight: 500; }
+  .kv dd { margin: 0; }
+  code {
+    font-family: ui-monospace, "SF Mono", monospace;
+    font-size: 0.9em;
+    background: var(--gold-soft);
+    border-radius: 4px;
+    padding: 0.1em 0.4em;
+  }
+
+  .contact {
+    background: var(--forest-dark);
+    color: #eafff0;
+    border-radius: 16px;
+    padding: 22px 24px;
+    margin-top: 44px;
+  }
+  :root:not([data-theme="light"]) .contact,
+  :root[data-theme="dark"] .contact {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    color: var(--ink);
+  }
+  .contact h2 {
+    border: none;
+    margin: 0 0 8px;
+    padding: 0;
+    color: #d9f99d;
+  }
+  :root:not([data-theme="light"]) .contact h2,
+  :root[data-theme="dark"] .contact h2 { color: var(--forest); }
+  .contact p { color: inherit; opacity: 0.92; }
+  .contact a { color: #d9f99d; }
+  :root:not([data-theme="light"]) .contact a,
+  :root[data-theme="dark"] .contact a { color: var(--link); }
+
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <span class="badge">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 6v6c0 5 4 8.5 9 10 5-1.5 9-5 9-10V6z"/></svg>
+    Bolt Runner · com.kidsvolt.bolt
+  </span>
+
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated September 8, 2026</p>
+
+  <section>
+    <p>Bolt Runner is a game built for kids, and this policy is written to be readable by their parents. In short: <strong>the game collects almost nothing, and the one thing it does collect is a nickname you choose yourself.</strong> The rest of this page explains exactly what that means.</p>
+  </section>
+
+  <section>
+    <h2>What the game collects</h2>
+    <p>Bolt Runner can be played entirely offline with <strong>no data collected at all</strong>. Your run history, unlocked heroes, and in-game currency are stored only on your own device and are never sent anywhere.</p>
+    <p>If you choose to appear on the online leaderboard, the game asks for a nickname and then sends three things to our server:</p>
+    <div class="card">
+      <div class="kv">
+        <dt>Nickname</dt><dd>whatever you type — the game asks you not to use your real name, and blocks common inappropriate words</dd>
+        <dt>Score</dt><dd>the number of points from that run</dd>
+        <dt>Difficulty</dt><dd>which of the three difficulty levels you played</dd>
+      </div>
+    </div>
+    <p class="muted">That's the complete list. Bolt Runner does not ask for your name, email address, birthdate, photo, contacts, or location, and does not access your device's microphone, camera, or address book.</p>
+  </section>
+
+  <section>
+    <h2>How you're identified</h2>
+    <p>There is no account, login, or password. Each install of the game is given an anonymous, randomly generated ID by our database provider (Supabase) the first time you connect to the leaderboard. That random ID — not your name or device — is what your nickname and score are attached to.</p>
+  </section>
+
+  <section>
+    <h2>Where it's stored</h2>
+    <p>Leaderboard data is stored with <a href="https://supabase.com" target="_blank" rel="noopener">Supabase</a>, hosted in the EU (Frankfurt region), which acts as our data processor. Data in transit is encrypted (HTTPS). Database access is restricted so that <strong>a player can only ever read or write their own leaderboard entry</strong> — this is enforced by the database itself, not just the app.</p>
+  </section>
+
+  <section>
+    <h2>What we don't do</h2>
+    <ul>
+      <li>No advertising, and no ad networks are integrated into the game.</li>
+      <li>No analytics or behavioral tracking SDKs of any kind.</li>
+      <li>No selling or sharing of data with third parties, other than the hosting relationship with Supabase described above.</li>
+      <li>No in-app purchases involving real money — the in-game currency (⚡ bolts) is earned only by playing.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Children's privacy</h2>
+    <p>Bolt Runner is designed for children. We intentionally minimise what the game asks for: no account, no personal information beyond a self-chosen nickname, and no advertising. The nickname prompt itself asks players not to use their real name.</p>
+    <p>If you're a parent or guardian and want a leaderboard entry removed, reach out using the contact details below with the nickname and approximate date of play, and we'll delete it.</p>
+  </section>
+
+  <section>
+    <h2>Your choices</h2>
+    <ul>
+      <li>Playing offline, without a nickname, sends nothing to our servers at all.</li>
+      <li>You can request deletion of a leaderboard entry at any time (see Contact, below).</li>
+      <li>Uninstalling the game removes all locally stored data (progress, wallet, unlocked heroes) from your device.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <p class="muted">If this policy changes, the "last updated" date at the top of this page will change too. We'll keep changes consistent with the principle above: collect as little as possible.</p>
+  </section>
+
+  <div class="contact">
+    <h2>Contact</h2>
+    <p>Questions about this policy, or a request to remove a leaderboard entry:</p>
+    <p><a href="mailto:privacy@kidsvolt.app">privacy@kidsvolt.app</a></p>
+  </div>
+
+  <footer>
+    Bolt Runner is developed by Kidsvolt. This policy applies to the Bolt Runner mobile app (package <code>com.kidsvolt.bolt</code>) on Google Play and the App Store.
+  </footer>
+
+</div>
+</body>
+</html>

@@ -20,6 +20,9 @@ android/keystore.properties
 android/app/*.jks
 android/app/*.keystore
 
+# Machine-local Android SDK path
+android/local.properties
+
 # AI assistant context (local-only, not shared)
 CLAUDE.md
 .claude/
